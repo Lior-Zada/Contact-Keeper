@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://lior:Lior7490726@lior-rinat-jqjw8.gcp.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "tidsfjanl"
+}
