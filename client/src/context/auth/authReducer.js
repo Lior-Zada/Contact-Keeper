@@ -20,7 +20,6 @@ export default (state, action) => {
                 isAuthenticated: true,
                 loading: false
             };
-            break;
         case USER_LOADED:
             return {
                 ...state,
@@ -28,7 +27,6 @@ export default (state, action) => {
                 isAuthenticated: true,
                 loading: false
             };
-            break;
 
         case REGISTER_FAIL:
         case LOGIN_FAIL:
@@ -43,16 +41,13 @@ export default (state, action) => {
                 loading: false,
                 user: null
             };
-            break;
         case CLEAR_ERRORS:
             return {
                 ...state,
                 error: null
             };
-            break;
 
         default:
             return state;
-            break;
     }
 };

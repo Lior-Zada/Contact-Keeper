@@ -19,14 +19,12 @@ export default (state, action) => {
                 contacts: action.payload,
                 loading: false
             };
-            break;
-        case ADD_CONTACT:
+        case ADD_CONTACT: 
             return {
                 ...state,
                 contacts: [action.payload, ...state.contacts],
                 loading: false
             };
-            break;
         case CLEAR_CONTACTS:
             return {
                 ...state,
@@ -35,7 +33,6 @@ export default (state, action) => {
                 currentContact: null,
                 error: null
             };
-            break;
         case DELETE_CONTACT:
             return {
                 ...state,
@@ -44,19 +41,16 @@ export default (state, action) => {
                 }),
                 loading: false
             };
-            break;
         case SET_CURRENT:
             return {
                 ...state,
                 currentContact: action.payload
             };
-            break;
         case CLEAR_CURRENT:
             return {
                 ...state,
                 currentContact: null
             };
-            break;
         case UPDATE_CONTACT:
             return {
                 ...state,
@@ -67,7 +61,6 @@ export default (state, action) => {
                 ),
                 loading: false
             };
-            break;
         case FILTER_CONTACTS:
             return {
                 ...state,
@@ -78,19 +71,16 @@ export default (state, action) => {
                     );
                 })
             };
-            break;
         case CLEAR_FILTER:
             return {
                 ...state,
                 filtered: null
             };
-            break;
         case CONTACT_ERROR:
             return {
                 ...state,
                 error: action.payload
             };
-            break;
 
         default:
             break;

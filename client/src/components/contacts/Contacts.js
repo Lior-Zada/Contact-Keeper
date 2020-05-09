@@ -11,7 +11,7 @@ const Contacts = () => {
 
     useEffect(() => {
         getContacts();
-        // esling-disable-next-line
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (contacts !== null && contacts.length === 0 && !loading) {
@@ -21,7 +21,7 @@ const Contacts = () => {
         <Fragment>
             {contacts !== null && !loading ? (
                 <TransitionGroup className='todo-list'>
-                    {(filtered ? filtered : contacts).map(contact => (
+                    {(filtered ? filtered : contacts).map((contact) => (
                         <CSSTransition
                             key={contact._id}
                             timeout={500}
